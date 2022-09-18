@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard demo</title>
+    
+    <script src="js/libs/jquery.min.js"></script>
+    <script src="js/libs/jquery-ui.js"></script>
+    <link rel="stylesheet" href="js/libs/bootstrap/bootstrap.min.css">
+    <script src="js/libs/bootstrap/bootstrap.min.js"></script>
+    <script src="js/libs/lodash.min.js"></script>
+	<link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+   <script src="js/libs/jquery-ui.js"></script>
+	<script src='js/libs/underscore/underscore.js'></script>
+  <script src='js/libs/jsonform/jsonform.js'></script>
+</head>
+<body >
+ <form id="result-form" class="form-vertical"></form>
+     
+<div id="res" class="alert"></div>
+
+	<script>
+	$('#result-form').jsonForm({
+        schema: {
+          name: {
+            type: 'string',
+            title: 'Name',
+            required: true
+          },
+          age: {
+            type: 'number',
+            title: 'Age'
+          }
+        },
+        onSubmit: function (errors, values) {
+         
+        }
+      });
+	</script>
+</body>
+</html>

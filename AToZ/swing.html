@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Swing Slideshow jquery javascript+html code example for website design, website development, web developer, web design, web development, web designer, website, web page</title>
+
+    <link href="css/site-style.css" rel="stylesheet" />
+    <link href="css/public.css" rel="stylesheet" />
+
+   
+</head>
+<body style="background:#010000;">
+    <!-- Google Ad Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <!-- End Google Ad Code -->
+    <script type="text/javascript" src="js/jssor.slider.min.js"></script>
+
+    <script>
+        var _SlideshowTransitionC = {};
+        var _SlideshowTransitionCodes = {};
+        var _SlideshowTransitions = [];
+
+        //----------- Swing Outside Effects --------------
+        {
+
+            _SlideshowTransitionC["Swing Outside in Stairs"] = { $Duration: 1200, x: 0.2, y: -0.1, $Delay: 20, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Formation: $JssorSlideshowFormations$.$FormationStraightStairs, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Outside: true, $Round: { $Left: 1.3, $Top: 2.5 } };
+            _SlideshowTransitionCodes["Swing Outside in Stairs"] = "{$Duration:1200,x:0.2,y:-0.1,$Delay:20,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Top:$JssorEasing$.$EaseInWave,$Clip:$JssorEasing$.$EaseOutQuad},$Outside:true,$Round:{$Left:1.3,$Top:2.5}}";
+
+            _SlideshowTransitionC["Swing Outside in ZigZag"] = { $Duration: 1200, x: 0.2, y: -0.1, $Delay: 20, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Formation: $JssorSlideshowFormations$.$FormationZigZag, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Outside: true, $Round: { $Left: 1.3, $Top: 2.5 } };
+            _SlideshowTransitionCodes["Swing Outside in ZigZag"] = "{$Duration:1200,x:0.2,y:-0.1,$Delay:20,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$Formation:$JssorSlideshowFormations$.$FormationZigZag,$Assembly:260,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Top:$JssorEasing$.$EaseInWave,$Clip:$JssorEasing$.$EaseOutQuad},$Outside:true,$Round:{$Left:1.3,$Top:2.5}}";
+
+            _SlideshowTransitionC["Swing Outside in Swirl"] = { $Duration: 1200, x: 0.2, y: -0.1, $Delay: 20, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Formation: $JssorSlideshowFormations$.$FormationSwirl, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Outside: true, $Round: { $Left: 1.3, $Top: 2.5 } };
+            _SlideshowTransitionCodes["Swing Outside in Swirl"] = "{$Duration:1200,x:0.2,y:-0.1,$Delay:20,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$Formation:$JssorSlideshowFormations$.$FormationSwirl,$Assembly:260,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Top:$JssorEasing$.$EaseInWave,$Clip:$JssorEasing$.$EaseOutQuad},$Outside:true,$Round:{$Left:1.3,$Top:2.5}}";
+
+            _SlideshowTransitionC["Swing Outside in Random"] = { $Duration: 1200, x: 0.2, y: -0.1, $Delay: 80, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Outside: true, $Round: { $Left: 1.3, $Top: 2.5 } };
+            _SlideshowTransitionCodes["Swing Outside in Random"] = "{$Duration:1200,x:0.2,y:-0.1,$Delay:80,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$Easing:{$Left:$JssorEasing$.$EaseInWave,$Top:$JssorEasing$.$EaseInWave,$Clip:$JssorEasing$.$EaseOutQuad},$Outside:true,$Round:{$Left:1.3,$Top:2.5}}";
+
+            _SlideshowTransitionC["Swing Outside in Random Chess"] = { $Duration: 1200, x: 0.2, y: -0.1, $Delay: 80, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $ChessMode: { $Column: 3, $Row: 3 }, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Outside: true, $Round: { $Left: 1.3, $Top: 2.5 } };
+            _SlideshowTransitionCodes["Swing Outside in Random Chess"] = "{$Duration:1200,x:0.2,y:-0.1,$Delay:80,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$ChessMode:{$Column:3,$Row:3},$Easing:{$Left:$JssorEasing$.$EaseInWave,$Top:$JssorEasing$.$EaseInWave,$Clip:$JssorEasing$.$EaseOutQuad},$Outside:true,$Round:{$Left:1.3,$Top:2.5}}";
+
+            _SlideshowTransitionC["Swing Outside in Square"] = { $Duration: 1200, x: 0.2, y: -0.1, $Delay: 20, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Formation: $JssorSlideshowFormations$.$FormationSquare, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Outside: true, $Round: { $Left: 1.3, $Top: 2.5 } };
+            _SlideshowTransitionCodes["Swing Outside in Square"] = "{$Duration:1200,x:0.2,y:-0.1,$Delay:20,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$Formation:$JssorSlideshowFormations$.$FormationSquare,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Top:$JssorEasing$.$EaseInWave,$Clip:$JssorEasing$.$EaseOutQuad},$Outside:true,$Round:{$Left:1.3,$Top:2.5}}";
+
+            _SlideshowTransitionC["Swing Outside out Stairs"] = { $Duration: 1200, x: 0.2, y: -0.1, $Delay: 20, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $SlideOut: true, $Formation: $JssorSlideshowFormations$.$FormationStraightStairs, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Outside: true, $Round: { $Left: 1.3, $Top: 2.5 } };
+            _SlideshowTransitionCodes["Swing Outside out Stairs"] = "{$Duration:1200,x:0.2,y:-0.1,$Delay:20,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Top:$JssorEasing$.$EaseInWave,$Clip:$JssorEasing$.$EaseOutQuad},$Outside:true,$Round:{$Left:1.3,$Top:2.5}}";
+
+            _SlideshowTransitionC["Swing Outside out ZigZag"] = { $Duration: 1200, x: 0.2, y: -0.1, $Delay: 20, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $SlideOut: true, $Formation: $JssorSlideshowFormations$.$FormationZigZag, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Outside: true, $Round: { $Left: 1.3, $Top: 2.5 } };
+            _SlideshowTransitionCodes["Swing Outside out ZigZag"] = "{$Duration:1200,x:0.2,y:-0.1,$Delay:20,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationZigZag,$Assembly:260,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Top:$JssorEasing$.$EaseInWave,$Clip:$JssorEasing$.$EaseOutQuad},$Outside:true,$Round:{$Left:1.3,$Top:2.5}}";
+
+            _SlideshowTransitionC["Swing Outside out Swirl"] = { $Duration: 1200, x: 0.2, y: -0.1, $Delay: 20, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $SlideOut: true, $Formation: $JssorSlideshowFormations$.$FormationSwirl, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Outside: true, $Round: { $Left: 1.3, $Top: 2.5 } };
+            _SlideshowTransitionCodes["Swing Outside out Swirl"] = "{$Duration:1200,x:0.2,y:-0.1,$Delay:20,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationSwirl,$Assembly:260,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Top:$JssorEasing$.$EaseInWave,$Clip:$JssorEasing$.$EaseOutQuad},$Outside:true,$Round:{$Left:1.3,$Top:2.5}}";
+
+            _SlideshowTransitionC["Swing Outside out Random"] = { $Duration: 1200, x: 0.2, y: -0.1, $Delay: 80, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $SlideOut: true, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Outside: true, $Round: { $Left: 1.3, $Top: 2.5 } };
+            _SlideshowTransitionCodes["Swing Outside out Random"] = "{$Duration:1200,x:0.2,y:-0.1,$Delay:80,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$SlideOut:true,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Top:$JssorEasing$.$EaseInWave,$Clip:$JssorEasing$.$EaseOutQuad},$Outside:true,$Round:{$Left:1.3,$Top:2.5}}";
+
+            _SlideshowTransitionC["Swing Outside out Random Chess"] = { $Duration: 1200, x: 0.2, y: -0.1, $Delay: 80, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $SlideOut: true, $ChessMode: { $Column: 3, $Row: 3 }, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Outside: true, $Round: { $Left: 1.3, $Top: 2.5 } };
+            _SlideshowTransitionCodes["Swing Outside out Random Chess"] = "{$Duration:1200,x:0.2,y:-0.1,$Delay:80,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$SlideOut:true,$ChessMode:{$Column:3,$Row:3},$Easing:{$Left:$JssorEasing$.$EaseInWave,$Top:$JssorEasing$.$EaseInWave,$Clip:$JssorEasing$.$EaseOutQuad},$Outside:true,$Round:{$Left:1.3,$Top:2.5}}";
+
+            _SlideshowTransitionC["Swing Outside out Square"] = { $Duration: 1200, x: 0.2, y: -0.1, $Delay: 20, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $SlideOut: true, $Formation: $JssorSlideshowFormations$.$FormationSquare, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Outside: true, $Round: { $Left: 1.3, $Top: 2.5 } };
+            _SlideshowTransitionCodes["Swing Outside out Square"] = "{$Duration:1200,x:0.2,y:-0.1,$Delay:20,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationSquare,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Top:$JssorEasing$.$EaseInWave,$Clip:$JssorEasing$.$EaseOutQuad},$Outside:true,$Round:{$Left:1.3,$Top:2.5}}";
+        }
+
+        //----------- Swing Inside Effects --------------
+        {
+
+            _SlideshowTransitionC["Swing Inside in Stairs"] = { $Duration: 1200, x: 0.2, y: -0.1, $Delay: 20, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Formation: $JssorSlideshowFormations$.$FormationStraightStairs, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Round: { $Left: 1.3, $Top: 2.5 } };
+            _SlideshowTransitionCodes["Swing Inside in Stairs"] = "{$Duration:1200,x:0.2,y:-0.1,$Delay:20,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Top:$JssorEasing$.$EaseInWave,$Clip:$JssorEasing$.$EaseOutQuad},$Round:{$Left:1.3,$Top:2.5}}";
+
+            _SlideshowTransitionC["Swing Inside in ZigZag"] = { $Duration: 1200, x: 0.2, y: -0.1, $Delay: 20, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Formation: $JssorSlideshowFormations$.$FormationZigZag, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Round: { $Left: 1.3, $Top: 2.5 } };
+            _SlideshowTransitionCodes["Swing Inside in ZigZag"] = "{$Duration:1200,x:0.2,y:-0.1,$Delay:20,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$Formation:$JssorSlideshowFormations$.$FormationZigZag,$Assembly:260,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Top:$JssorEasing$.$EaseInWave,$Clip:$JssorEasing$.$EaseOutQuad},$Round:{$Left:1.3,$Top:2.5}}";
+
+            _SlideshowTransitionC["Swing Inside in Swirl"] = { $Duration: 1200, x: 0.2, y: -0.1, $Delay: 20, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Formation: $JssorSlideshowFormations$.$FormationSwirl, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Round: { $Left: 1.3, $Top: 2.5 } };
+            _SlideshowTransitionCodes["Swing Inside in Swirl"] = "{$Duration:1200,x:0.2,y:-0.1,$Delay:20,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$Formation:$JssorSlideshowFormations$.$FormationSwirl,$Assembly:260,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Top:$JssorEasing$.$EaseInWave,$Clip:$JssorEasing$.$EaseOutQuad},$Round:{$Left:1.3,$Top:2.5}}";
+
+            _SlideshowTransitionC["Swing Inside in Random"] = { $Duration: 1200, x: 0.2, y: -0.1, $Delay: 80, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Round: { $Left: 1.3, $Top: 2.5 } };
+            _SlideshowTransitionCodes["Swing Inside in Random"] = "{$Duration:1200,x:0.2,y:-0.1,$Delay:80,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$Easing:{$Left:$JssorEasing$.$EaseInWave,$Top:$JssorEasing$.$EaseInWave,$Clip:$JssorEasing$.$EaseOutQuad},$Round:{$Left:1.3,$Top:2.5}}";
+
+            _SlideshowTransitionC["Swing Inside in Random Chess"] = { $Duration: 1200, x: 0.2, y: -0.1, $Delay: 80, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $ChessMode: { $Column: 3, $Row: 3 }, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Round: { $Left: 1.3, $Top: 2.5 } };
+            _SlideshowTransitionCodes["Swing Inside in Random Chess"] = "{$Duration:1200,x:0.2,y:-0.1,$Delay:80,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$ChessMode:{$Column:3,$Row:3},$Easing:{$Left:$JssorEasing$.$EaseInWave,$Top:$JssorEasing$.$EaseInWave,$Clip:$JssorEasing$.$EaseOutQuad},$Round:{$Left:1.3,$Top:2.5}}";
+
+            _SlideshowTransitionC["Swing Inside in Square"] = { $Duration: 1200, x: 0.2, y: -0.1, $Delay: 20, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Formation: $JssorSlideshowFormations$.$FormationSquare, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Round: { $Left: 1.3, $Top: 2.5 } };
+            _SlideshowTransitionCodes["Swing Inside in Square"] = "{$Duration:1200,x:0.2,y:-0.1,$Delay:20,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$Formation:$JssorSlideshowFormations$.$FormationSquare,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Top:$JssorEasing$.$EaseInWave,$Clip:$JssorEasing$.$EaseOutQuad},$Round:{$Left:1.3,$Top:2.5}}";
+
+            _SlideshowTransitionC["Swing Inside out ZigZag"] = { $Duration: 1200, x: 0.2, y: -0.1, $Delay: 20, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $SlideOut: true, $Formation: $JssorSlideshowFormations$.$FormationZigZag, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Round: { $Left: 1.3, $Top: 2.5 } };
+            _SlideshowTransitionCodes["Swing Inside out ZigZag"] = "{$Duration:1200,x:0.2,y:-0.1,$Delay:20,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationZigZag,$Assembly:260,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Top:$JssorEasing$.$EaseInWave,$Clip:$JssorEasing$.$EaseOutQuad},$Round:{$Left:1.3,$Top:2.5}}";
+
+            _SlideshowTransitionC["Swing Inside out Swirl"] = { $Duration: 1200, x: 0.2, y: -0.1, $Delay: 20, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $SlideOut: true, $Formation: $JssorSlideshowFormations$.$FormationSwirl, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Round: { $Left: 1.3, $Top: 2.5 } };
+            _SlideshowTransitionCodes["Swing Inside out Swirl"] = "{$Duration:1200,x:0.2,y:-0.1,$Delay:20,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationSwirl,$Assembly:260,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Top:$JssorEasing$.$EaseInWave,$Clip:$JssorEasing$.$EaseOutQuad},$Round:{$Left:1.3,$Top:2.5}}";
+        }
+
+        $Jssor$.$Each(_SlideshowTransitionC, function (slideshowTransition, name) {
+            _SlideshowTransitions.push(slideshowTransition);
+        });
+    </script>
+    <script>
+        jssor_slider1_starter = function (containerId) {
+            var jssor_slider1 = new $JssorSlider$(containerId, {
+                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $Idle: 400,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $Cols is greater than 1, or parking position is not 0)
+                $PauseOnHover: 1,                                   //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
+
+                $SlideshowOptions: {                                //[Optional] Options to specify and enable slideshow or not
+                    $Class: $JssorSlideshowRunner$,                 //[Required] Class to create instance of slideshow
+                    $Transitions: _SlideshowTransitions,            //[Required] An array of slideshow transitions to play slideshow
+                    $TransitionsOrder: 1,                           //[Optional] The way to choose transition to play slide, 1 Sequence, 0 Random
+                    $ShowLink: true                                 //[Optional] Whether to bring slide link on top of the slider when slideshow is running, default value is false
+                }
+            });
+
+            PlaySlideshowTransition = function (event) {
+                $Jssor$.$StopEvent(event);
+                $Jssor$.$CancelEvent(event);
+
+                try {
+                    var eventSrcElement = $Jssor$.$EvtSrc(event);
+                    var transitionName = $Jssor$.$InnerText(eventSrcElement);
+                    jssor_slider1.$Next();
+
+                    jssor_slider1.$SetSlideshowTransitions([_SlideshowTransitionC[transitionName]]);
+
+                    var effectStr = _SlideshowTransitionCodes[transitionName];
+
+                    if (transitionNameTextBox) {
+                        transitionNameTextBox.value = transitionName;
+                    }
+                    if (transitionCodeTextBox) {
+                        transitionCodeTextBox.value = effectStr;
+                    }
+                }
+                catch (e) { }
+            }
+
+            TransitionTextBoxClickEventHandler = function (event) {
+                transitionCodeTextBox.select();
+
+                $Jssor$.$CancelEvent(event);
+                $Jssor$.$StopEvent(event);
+            }
+
+            var transitionCodeTextBox = $Jssor$.$GetElement("stTransition");
+            var transitionNameTextBox = $Jssor$.$GetElement("stTransitionName");
+            $Jssor$.$AddEvent(transitionCodeTextBox, "click", TransitionTextBoxClickEventHandler);
+
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizing
+            function ScaleSlider() {
+                var bodyWidth = document.body.clientWidth;
+                if (bodyWidth)
+                    jssor_slider1.$ScaleWidth(Math.min(bodyWidth, 600));
+                else
+                    $Jssor$.$Delay(ScaleSlider, 600);
+            }
+             $Jssor$.$Delay(ScaleSlider, 60);
+
+            ScaleSlider();
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            //responsive code end
+        };
+    </script>
+
+  
+
+
+    <div class="headerspace"></div>
+<!-- 
+    <div style="height: 10px;"></div> -->
+
+    <!-- Jssor Slider Begin -->
+    <!-- To move inline styles to css file/block, please specify a class name for each element. --> 
+    
+<div id="slider1_container" style="position: relative; margin: 0 auto; width:600px; height:300px; left:0px; top:0px;">
+
+        <!-- Loading Screen -->
+        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+            <div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center;
+                top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+        </div>
+
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 440px; height: 650px;
+            overflow: hidden;">
+            <div>
+                <img u="image" src="img/Home3.jpg" />
+                <img u="thumb" src="img/thumb-01.jpg" />
+            </div>
+           <div>
+                <img u="image" src="img/A.jpg" />
+                <img u="thumb" src="img/thumb-01.jpg" />
+            </div>
+            <div>
+                <img u="image" src="img/B.jpg" />
+                <img u="thumb" src="img/thumb-02.jpg" />
+            </div>
+            <div>
+                <img u="image" src="img/C.jpg" />
+                <img u="thumb" src="img/thumb-03.jpg" />
+            </div>
+            <div>
+                <img u="image" src="img/D.jpg" />
+                <img u="thumb" src="img/thumb-04.jpg" />
+            </div>
+            <div>
+                <img u="image" src="img/E.jpg" />
+                <img u="thumb" src="img/thumb-01.jpg" />
+            </div>
+            <div>
+                <img u="image" src="img/F.jpg" />
+                <img u="thumb" src="img/thumb-01.jpg" />
+            </div>
+            <div>
+                <img u="image" src="img/G.jpg" />
+                <img u="thumb" src="img/thumb-01.jpg" />
+            </div>
+            <div>
+                <img u="image" src="img/H.jpg" />
+                <img u="thumb" src="img/thumb-01.jpg" />
+            </div>
+             <div>
+                <img u="image" src="img/I.jpg" />
+                <img u="thumb" src="img/thumb-01.jpg" />
+            </div>
+             <div>
+                <img u="image" src="img/J.jpg" />
+                <img u="thumb" src="img/thumb-01.jpg" />
+            </div>
+             <div>
+                <img u="image" src="img/K.jpg" />
+                <img u="thumb" src="img/thumb-01.jpg" />
+            </div>
+             <div>
+                <img u="image" src="img/L.jpg" />
+                <img u="thumb" src="img/thumb-01.jpg" />
+            </div>
+             <div>
+                <img u="image" src="img/M.jpg" />
+                <img u="thumb" src="img/thumb-01.jpg" />
+            </div>
+             <div>
+                <img u="image" src="img/N.jpg" />
+                <img u="thumb" src="img/thumb-01.jpg" />
+            </div>
+             <div>
+                <img u="image" src="img/O.jpg" />
+                <img u="thumb" src="img/thumb-01.jpg" />
+            </div>
+             <div>
+                <img u="image" src="img/P.jpg" />
+                <img u="thumb" src="img/thumb-01.jpg" />
+            </div>
+             <div>
+                <img u="image" src="img/Q.jpg" />
+                <img u="thumb" src="img/thumb-01.jpg" />
+            </div>
+             <div>
+                <img u="image" src="img/R.jpg" />
+                <img u="thumb" src="img/thumb-01.jpg" />
+            </div>
+             <div>
+                <img u="image" src="img/S.jpg" />
+                <img u="thumb" src="img/thumb-01.jpg" />
+            </div>
+             <div>
+                <img u="image" src="img/T.jpg" />
+                <img u="thumb" src="img/thumb-01.jpg" />
+            </div>
+             <div>
+                <img u="image" src="img/U.jpg" />
+                <img u="thumb" src="img/thumb-01.jpg" />
+            </div>
+             <div>
+                <img u="image" src="img/V.jpg" />
+                <img u="thumb" src="img/thumb-01.jpg" />
+            </div>
+             <div>
+                <img u="image" src="img/W.jpg" />
+                <img u="thumb" src="img/thumb-01.jpg" />
+            </div>
+             <div>
+                <img u="image" src="img/X.jpg" />
+                <img u="thumb" src="img/thumb-01.jpg" />
+            </div>
+             <div>
+                <img u="image" src="img/Y.jpg" />
+                <img u="thumb" src="img/thumb-01.jpg" />
+            </div>
+             <div>
+                <img u="image" src="img/Z.jpg" />
+                <img u="thumb" src="img/thumb-01.jpg" />
+            </div>
+            <div>
+                <img u="image" src="img/End.jpg" />
+                <img u="thumb" src="img/thumb-01.jpg" />
+            </div>
+        </div>
+        <a style="display: none" href="http://www.jssor.com">jQuery Slider</a>
+        <!-- Trigger -->
+    </div>
+    <!-- Jssor Slider End -->
+    <!--#region slideshow codes-->
+    <div style="height: 20px;">
+    <audio  autoplay>
+  <source src="One.ogg" type="audio/ogg">
+  <source src="One.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+    </div>
+
+  
+    <script>jssor_slider1_starter("slider1_container");</script>
+
+    
+
+    <!--#endregion-->
+
+    <div style="height: 10px;"></div>
+
+
+    <div style="height: 15px;"></div>
+</body>
+</html>

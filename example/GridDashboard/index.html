@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard demo</title>
+    
+    <script src="js/libs/jquery.min.js"></script>
+    <script src="js/libs/jquery-ui.js"></script>
+    <link rel="stylesheet" href="js/libs/bootstrap/bootstrap.min.css">
+    <script src="js/libs/bootstrap/bootstrap.min.js"></script>
+    <script src="js/libs/lodash.min.js"></script>
+	<link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	
+	<!-- datatable -->
+	<link href="Scripts/DataTables/extensions/Buttons/css/buttons.dataTables.min.css" rel="stylesheet" type="text/css" /> 
+    <link href="Scripts/DataTables/media/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+
+    <link href="Scripts/DataTables/extensions/select/css/select.dataTables.min.css" rel="stylesheet" type="text/css" />
+    <link href="Scripts/DataTables/extensions/ColReorder/css/colReorder.dataTables.min.css" rel="stylesheet" type="text/css" />
+        
+    <script src="Scripts/DataTables/media/js/jquery.dataTables.js"></script>
+    <script src="Scripts/DataTables/extensions/Buttons/js/dataTables.buttons.min.js"></script>
+    <script src="Scripts/DataTables/extensions/Buttons/js/buttons.html5.min.js"></script>
+    <script src="Scripts/DataTables/extensions/Buttons/js/buttons.colVis.min.js"></script>
+
+    <script src="Scripts/DataTables/extensions/select/js/dataTables.select.min.js"></script>
+    <script src="Scripts/DataTables/extensions/ColReorder/js/dataTables.colReorder.min.js"></script>
+	<!-- datatable -->
+	
+	<script src='js/libs/bootstrap3-dialog/js/bootstrap-dialog.min.js'></script>
+	<link rel='stylesheet' href='js/libs/bootstrap3-dialog/css/bootstrap-dialog.min.css'  type='text/css' />
+	
+	
+	
+	<script type="text/javascript" src="js/libs/OpenLayersMap/ol-debug.js" ></script>
+	<link rel="stylesheet" href="js/libs/OpenLayersMap/ol.css"/>
+	
+	
+    <script type="text/javascript" src="js/libs/echarts/echarts.min.js"></script>
+	
+	<script src='js/libs/underscore/underscore.js'></script>
+    
+	<script src='js/libs/jsonform/jsonform.js'></script>
+  
+    <script type="text/javascript" src="js/jquery.gridster.js"></script>
+    <link href="js/jquery.gridster.css" rel="stylesheet">
+	<script type="text/javascript" src="js/gridHandler.min.js"></script>
+	<link href="css/gridView.css" rel="stylesheet">
+	<style>
+        #ewp-googlemap-main-id-readout{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        #MapSearchFilters {
+            width: 100%;
+            padding: 5px;
+        }
+
+        .contextMenu {
+            cursor: pointer;
+            background-color: #eee;
+            position: absolute;
+            border: solid 1px black;
+            width: 150px;
+        }
+
+        .contextMenu .menuItem {
+                padding: 5px;
+        }
+
+        .contextMenu .menuItem:hover {
+                background-color: #ccc;
+        }
+
+        .menuMessage {
+            padding: 5px;
+        }
+
+        .menuSeparator {
+            border-bottom: solid 1px black;
+        }
+    </style>
+    <style type="text/css">
+        .grid-stack {
+            background-color: #EEE;
+        }
+
+        .grid-stack-item-content {
+            color: #2c3e50;
+            text-align: center;
+            background-color: #EEE;
+        }
+		
+		.grid-stack .grid-stack-item .grid-stack-item-content,
+		.grid-stack .grid-stack-item .placeholder-content {
+			left: 5px;
+			right: 5px;
+		}
+
+
+    </style>
+</head>
+<body >
+
+        <div>
+           <!--  <a class="btn btn-default" id="save-grid" href="#">Save Conf</a>
+            <a class="btn btn-default" id="load-grid" href="#">Load Conf</a>
+            <a class="btn btn-default" id="clear-grid" href="#">Clear Conf</a> -->
+			<a id="new-widget-button" style="height: 40px; padding-top: 5px; margin: 5px; font-size: 15px;" class="btn btn-primary">
+				<span class="fa-stack">
+				  <i class="fa fa-square-o fa-stack-2x"></i>
+				  <i class="fa fa-plus fa-stack-1x"></i>
+				</span> Add Widget
+			</a>
+		<a id="clear-widget-button" style="height: 40px; padding-top: 5px; margin: 5px; font-size: 15px;" class="btn btn-danger">
+				<span class="fa-stack">
+				  <i class="fa fa-square-o fa-stack-2x"></i>
+				  <i class="fa fa-trash fa-stack-1x"></i>
+				</span> Clear
+			</a>
+        </div>
+
+        <br/>
+
+        <div class="gridster" style="background-color:pink;width:2000px">
+			<ul>
+				
+			</ul>
+        </div>
+
+        <hr/>
+		<div class='modal fade' id='WidgetSettingDialog' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>
+			<div class='modal-dialog'><div class='modal-content'>
+				<div class='modal-header'><h1>Widget Settings</h1></div>
+				<div class='modal-body'>
+                 <form id="form1" class="form-vertical"></form>
+                    
+                </div>
+			</div></div>
+		</div>
+        <div id="footer">
+        <div class="navbar navbar-inner  navbar-fixed-bottom">
+            <p class="muted credit"><center style="color: black;">© 2015 Kenneth Hu. All Rights Reserved. Questions? Feel free to <a href="mailto:Kenneth.hu@hotmail.com">drop me an email</a>.</center></p>
+        </div>
+
+    </div>
+    </div>
+
+
+
+	<script>
+	 $(document).ready(function(){
+        // initMap(0);
+         $('#table2').DataTable( {
+            "ajax": 'data/data.json',
+            columns: [
+                    { title: "ID" },
+                    { title: "City" },
+                    { title: "iphone销量" },
+                    { title: "long" },
+                    { title: "lat" }
+                ],
+            "createdRow": function (row, data, rowIndex) {
+            var _data  = data;
+                $.each($('td', row), function (colIndex) {
+                    $(this).attr('data-long', _data[3]);
+                    $(this).attr('data-lat', _data[4]);
+                });
+            }
+        });
+	 });
+		  // init layoutHandler module
+         var gridHandler = $(document.body).gridHandler({
+          // portlet default sizes
+          dimX: 50,
+          dimY: 50,
+          // movable, resizable
+          editable: true,
+          draggable:true,
+         
+          });
+          gridHandler.init();
+		 
+		$(document.body).on('click', '#new-widget-button', function(e) {
+            var _id = gridHandler.addNewWidget();
+        });
+		  $(document.body).on('click', '#get-widget-button', function(e) {
+            var _content = gridHandler.serialize();
+			$('#saved-data').val(JSON.stringify(_content));
+          });
+		$(document.body).on('click', '#initMap-widget-button', function(e) {
+            gridHandler.goToCoord(1.3332495,103.7391706);
+        });
+        $(document.body).on('click', 'i[setting-widget]', function (e) {
+            var wid = $(this).data('setting-widget');
+            /*
+            var fields = [
+  {
+      name: 'username',
+      label: 'Username',
+      type: 'text'
+  }, {
+      name: 'password',
+      label: 'Password',
+      type: 'password'
+  }, {
+      label: 'Submit',
+      type: 'submit',
+      class: 'btn-danger',
+      icon: 'ok'
+  }
+];
+	var form = FormForm( $('form'), fields );
+    form.render();
+    */
+          showDialog(wid);
+       
+        });
+		
+	function initMap(ID) {
+		var titleSource = new ol.source.OSM({
+			 url: 'http://mt{0-3}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',
+			 attributions: [
+				 new ol.Attribution({
+					 html: '© Google'
+				 }),
+				 new ol.Attribution({
+					 html: '<a href="https://developers.google.com/maps/terms">Terms of Use.</a>'
+				 })
+			 ]
+		 });
+		map = new ol.Map({
+			 layers: [
+				 new ol.layer.Group({
+					 'title': 'Base map',
+					 layers: [
+						 new ol.layer.Tile({
+							 title: 'Base',
+							 source: titleSource,
+						 })
+
+					 ],
+				 })
+			 ],
+
+			 target: 'widget-googlemap-main-id-map-'+ID,
+			 view: new ol.View({
+				 center: [-6655.5402445057125, 6709968.258934638],
+				 zoom: 13
+			 })
+		});
+		return map;
+	}
+    $(document.body).on('mouseover', '#table2 tr', function (e) {
+        var long = $(e.target).data('long');
+        var lat = $(e.target).data('lat');
+        if((typeof long !== 'undefined') && (typeof lat !== 'undefined')){
+                   gridHandler.goToCoord(long,lat);
+                   }
+    });
+	
+	function showDialog(id){
+		$('#WidgetSettingDialog').attr('data-id', id);
+		$('#WidgetSettingDialog').data('id', id);
+		$('#WidgetSettingDialog').modal('show');
+	}
+	</script>
+    <script type="text/javascript" src="js/map.min.js" ></script>
+    <script type="text/javascript" src="js/chartOptions.js" ></script>
+    <script type="text/javascript" src="js/ScatterOptions.js" ></script>
+    <script type="text/javascript" src="js/RadarOptions.js" ></script>
+	<script type="text/javascript" src="js/SankeyOptions.js" ></script>
+	<script type="text/javascript" src="js/RiverOptions.js" ></script>
+    <script type="text/javascript">
+	
+	$(document).ready(function() {
+        var PolyclinicChart = echarts.init(document.getElementById('example'));           
+        PolyclinicChart.setOption(PolyclinicsOption); 
+        $(document).on('PolyclinicChart:resize', function(e, eventInfo) {
+                  PolyclinicChart.resize();
+        });
+        
+        var PieChart = echarts.init(document.getElementById('example2'));           
+        PieChart.setOption(PieOption);
+         $(document).on('PieChart:resize', function(e, eventInfo) {
+                  PieChart.resize();
+        });
+        
+        var LineChart = echarts.init(document.getElementById('example3'));           
+        LineChart.setOption(LineOption);
+        $(document).on('LineChart:resize', function(e, eventInfo) {
+                  LineChart.resize();
+        });
+        
+        var ScatterChart = echarts.init(document.getElementById('example4'));           
+        ScatterChart.setOption(ScatterOption);
+        $(document).on('ScatterChart:resize', function(e, eventInfo) {
+                  ScatterChart.resize();
+        });
+        var RadarChart = echarts.init(document.getElementById('example5'));           
+        RadarChart.setOption(RadarOption);
+        $(document).on('RadarChart:resize', function(e, eventInfo) {
+                  RadarChart.resize();
+        });
+		
+		
+	});
+	
+	$('#form1').jsonForm({
+		"schema": {
+			"name": {
+				"type": "string",
+				"title": "Name:"
+			},
+			"field": {
+				"type": "string",
+				"title": "Type",
+				"enum": ["Radar Chart", "Scatter Chart", "Line Chart","boxplot Chart"]
+			}
+		},
+		"form": [{
+				"key": "name",
+				"fieldHtmlClass": "form-control"
+			},
+			{
+				"key": "field",
+				"fieldHtmlClass": "form-control"
+			},
+			{
+				"type": "actions",
+				"items": [{
+						"type": "button",
+						"title": "Submit",
+						"fieldHtmlClass": "btn btn-primary",
+						"onClick": function(evt) {
+							evt.preventDefault();
+							//  alert('Thank you!');     
+							var _id = $('#WidgetSettingDialog').data("id");
+							$('#view' + _id).html(' <table id="example'+_id+'" class="display" cellspacing="0" style="width: 100%; height: 100%; margin: 0 auto"></table>');
+							var Chart = echarts.init(document.getElementById('example' + _id));
+
+							Chart.setOption(RiverOptions);
+							 $(document).on('view' + _id+':resize', function(e, eventInfo) {
+									  Chart.resize();
+							});
+							$('#WidgetSettingDialog').modal('hide');
+						}
+					},
+					{
+						"type": "button",
+						"title": "Cancel",
+						"onClick": function(evt) {
+							evt.preventDefault();
+							//  alert('Thank you!');    
+							$('#WidgetSettingDialog').modal('hide');
+						}
+					}
+				]
+			}
+		]
+	});
+
+	/**
+   * Loads and displays the example identified by the given name
+  
+  var loadExample = function (example) {
+    $.ajax({
+      url: 'examples/events.json',
+      dataType: 'text'
+    }).done(function (code) {
+      var aceId = $('#form .ace_editor').attr('id');
+      var editor = ace.edit(aceId);
+      editor.getSession().setValue(code);
+    }).fail(function () {
+      $('#result').html('Sorry, I could not retrieve the example!');
+    });
+  };
+ */
+		</script>
+		<!--
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65211878-4', 'auto');
+  ga('send', 'pageview');
+
+</script> -->
+</body>
+</html>

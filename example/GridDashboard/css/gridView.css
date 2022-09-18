@@ -1,0 +1,110 @@
+    /*.gridster * {
+      margin:0;
+      padding:0;
+    }
+
+    .gridster div.panel-heading {
+        padding: 5px 7px;
+    }*/
+
+    ul {
+      list-style-type: none;
+    }
+
+    .controls {
+        margin-bottom: 20px;
+    }
+
+    .gridster ul {
+        margin: 0;
+        /*background-color: #EFEFEF;*/
+    }
+
+    /*.gridster li {
+        font-size: 1em;
+        font-weight: bold;
+        text-align: center;
+        line-height: 100%;
+    }*/
+    
+    .gridster {
+       /*margin: 0 auto;
+        opacity: .8;*/
+
+        -webkit-transition: opacity .6s;
+        -moz-transition: opacity .6s;
+        -o-transition: opacity .6s;
+        -ms-transition: opacity .6s;
+        transition: opacity .6s;
+    }
+
+    .gridster .gs-w {
+        /*background: #DDD;*/
+        cursor: pointer;
+    }
+
+    .gridster .player {
+        background: #F5F5F5;
+    }
+
+
+    .gridster .preview-holder {
+        border: none!important;
+        background: red!important;
+    }
+    
+    .gridster .portlet-body {
+         overflow: auto;
+    }
+
+    svg {
+        height: 100% !important;
+    }
+
+    .gs-w .panel, .gs-w .panel-body, .gs-w #pane, .gs-w #pane_body_2, .gs-w #pane_body_2 > div {
+        height: 100%;
+    }
+
+    /* context menu */
+
+    .context-menu {
+      display: none;
+      position: absolute;
+      z-index: 10;
+      padding: 12px 0;
+      width: 240px;
+      background-color: #fff;
+      border: solid 1px #dfdfdf;
+      box-shadow: 1px 1px 2px #cfcfcf;
+    }
+
+    .context-menu--active {
+      display: block;
+    }
+
+    .context-menu__items {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .context-menu__item {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .context-menu__item:last-child {
+      margin-bottom: 0;
+    }
+
+    .context-menu__link {
+      display: block;
+      padding: 4px 12px;
+      color: #0066aa;
+      text-decoration: none;
+    }
+
+    .context-menu__link:hover {
+      color: #fff;
+      background-color: #0066aa;
+    }

@@ -1,0 +1,108 @@
+[
+{
+    "type": "Feature",
+    "properties": {
+        "Name": "Khoo Teck Puat Hospital",
+        "Status": "Operational"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [103.8384,1.424034]
+    }
+}
+,
+{
+    "type": "Feature",
+    "properties": {
+        "Name": "Yishun Community Hospital",
+        "Status": "Operational"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [103.837783,1.4237883]
+    }
+}
+,
+{
+    "type": "Feature",
+    "properties": {
+        "Name": "Woodlands Medical Centre",
+        "Status": "Operational"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [103.772335,1.4463388]
+    }
+}
+,
+{
+    "type": "Feature",
+    "properties": {
+        "Name": "Singapore General Hospital",
+        "Status": "Operational"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [103.836171,1.282769]
+    }
+}
+,
+{
+    "type": "Feature",
+    "properties": {
+        "Name": "KK Women's and Children's Hospital",
+        "Status": "Operational"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [103.846944,1.310556]
+    }
+}
+,
+{
+    "type": "Feature",
+    "properties": {
+        "Name": "Tan Tock Seng Hospital",
+        "Status": "Operational"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [103.845944,1.321611]
+    }
+}
+,
+{
+    "type": "Feature",
+    "properties": {
+        "Name": "Institute of Mental Health",
+        "Status": "Operational"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [103.881667,1.378333]
+    }
+}
+,
+{
+    "type": "Feature",
+    "properties": {
+        "Name": "The Salvation Army Peacehaven Nursing Home",
+        "Status": "Operational"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [103.9616977,1.3538414]
+    }
+}
+,
+{
+    "type": "Feature",
+    "properties": {
+        "Name": "National University Hospital",
+        "Status": "Operational"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [103.7828,1.2951]
+    }
+}];

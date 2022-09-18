@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard demo</title>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/gridstack.css"/> -->
+	<script type="text/javascript" src="js/libs/jquery/jquery.min.js" ></script>
+	<script type="text/javascript" src="js/libs/bootstrap/bootstrap.min.js" ></script>
+	<link rel="stylesheet" href="js/libs/bootstrap/bootstrap.min.css"/>
+    <script type="text/javascript" src="js/libs/OpenLayersMap/ol-debug.js" ></script>
+	<link rel="stylesheet" href="js/libs/OpenLayersMap/ol.css"/>
+    <style type="text/css">
+        .grid-stack {
+            background-color: #EEE;
+        }
+
+        .grid-stack-item-content {
+            color: #2c3e50;
+            text-align: center;
+            background-color: #EEE;
+        }
+		
+		.grid-stack .grid-stack-item .grid-stack-item-content,
+		.grid-stack .grid-stack-item .placeholder-content {
+			left: 5px;
+			right: 5px;
+		}
+
+
+    </style>
+</head>
+<body>
+        <div>
+            <a class="btn btn-default" id="save-grid" href="#">Save Conf</a>
+            <a class="btn btn-default" id="load-grid" href="#">Load Conf</a>
+            <a class="btn btn-default" id="clear-grid" href="#">Clear Conf</a>
+			<a id="new-widget-button" style="height: 40px; padding-top: 5px; margin: 5px; font-size: 15px;" class="btn btn-primary">
+				<span class="fa-stack">
+				  <i class="fa fa-square-o fa-stack-2x"></i>
+				  <i class="fa fa-plus fa-stack-1x"></i>
+				</span> Add Widget
+			</a>
+			<a id="get-widget-button" style="height: 40px; padding-top: 5px; margin: 5px; font-size: 15px;" class="btn btn-primary">
+				<span class="fa-stack">
+				  <i class="fa fa-square-o fa-stack-2x"></i>
+				  <i class="fa fa-plus fa-stack-1x"></i>
+				</span> Get Widget
+			</a>
+        </div>
+
+        <br/>
+
+        <div id="map">
+			<ul>
+			</ul>
+        </div>
+
+        <hr/>
+
+        <textarea id="saved-data" cols="100" rows="20" readonly="readonly"></textarea>
+    </div>
+
+
+    <script type="text/javascript">
+	   $(document).ready(function(){
+	   console.log("load map");
+     var titleSource = new ol.source.OSM({
+                    url: 'http://mt{0-3}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',
+                    attributions: [
+                        new ol.Attribution({ html: '© Google' }),
+                        new ol.Attribution({ html: '<a href="https://developers.google.com/maps/terms">Terms of Use.</a>' })
+                    ]
+                });
+				map = new ol.Map({
+          layers: [
+            new ol.layer.Group({
+                'title': 'Base map',
+                layers: [
+                     new ol.layer.Tile({
+                        title: 'Base',
+                        source: titleSource,
+                     })
+                     
+                ],
+            })
+          ],
+         
+          target: 'map',
+          view: new ol.View({
+          center: [-6655.5402445057125, 6709968.258934638],
+          zoom: 13
+        })
+        });
+		});
+		
+		function getPointFromLongLat (long, lat) {
+        return ol.proj.transform([long, lat], 'EPSG:4326', 'EPSG:3857')
+    }
+
+    function getLongLatFromPoint (loc) {
+        return ol.proj.transform(loc, 'EPSG:3857', 'EPSG:4326')
+    }
+    </script>
+
+</body>
+</html>

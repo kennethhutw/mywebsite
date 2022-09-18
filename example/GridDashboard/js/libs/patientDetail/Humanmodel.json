@@ -1,0 +1,102 @@
+{
+	"name"			: "HumanBody",
+	"modelToLoad"	: "",
+	"Children"		: 
+	[
+		{
+			"name" 			: "Body",
+			"modelToLoad" 	: "js/libs/Bones/Male.js",
+			"Children"		: []
+		},
+		{
+			"name" 			: "Bone_spine",
+			"modelToLoad" 	: "js/libs/Bones/Bone_spline.js",
+			"Children"		: []
+		},
+		{
+			"name" 			: "Bone_RUarm",
+			"modelToLoad" 	: "js/libs/Bones/Bone_RUarm.js",
+			"Children"		: []
+		},
+		{
+			"name" 			: "Bone_RLarm",
+			"modelToLoad" 	: "js/libs/Bones/Bone_RLarm.js",
+			"Children"		: []
+		},
+		{
+			"name" 			: "Bone_Rthigh",
+			"modelToLoad" 	: "js/libs/Bones/Bone_Rthigh.js",
+			"Children"		: []
+		},
+		{
+			"name" 			: "Bone_Rshoulderblade",
+			"modelToLoad" 	: "js/libs/Bones/Bone_Rshoulderblade.js",
+			"Children"		: []
+		},
+		{
+			"name" 			: "Bone_ripcage",
+			"modelToLoad" 	: "js/libs/Bones/Bone_ripcage.js",
+			"Children"		: []
+		},
+		{
+			"name" 			: "Bone_Rhand",
+			"modelToLoad" 	: "js/libs/Bones/Bone_Rhand.js",
+			"Children"		: []
+		},
+		{
+			"name" 			: "Bone_Rfeet",
+			"modelToLoad" 	: "js/libs/Bones/Bone_Rfeet.js",
+			"Children"		: []
+		},
+		{
+			"name" 			: "Bone_Rcalf",
+			"modelToLoad" 	: "js/libs/Bones/Bone_Rcalf.js",
+			"Children"		: []
+		},
+		{
+			"name" 			: "Bone_pelvis",
+			"modelToLoad" 	: "js/libs/Bones/Bone_pelvis.js",
+			"Children"		: []
+		},
+		{
+			"name" 			: "Bone_LUarm",
+			"modelToLoad" 	: "js/libs/Bones/Bone_LUarm.js",
+			"Children"		: []
+		},
+		{
+			"name" 			: "Bone_Lthigh",
+			"modelToLoad" 	: "js/libs/Bones/Bone_Lthigh.js",
+			"Children"		: []
+		},
+		{
+			"name" 			: "Bone_Lshoulderblade",
+			"modelToLoad" 	: "js/libs/Bones/Bone_Lshoulderblade.js",
+			"Children"		: []
+		},
+		{
+			"name" 			: "Bone_LLarm",
+			"modelToLoad" 	: "js/libs/Bones/Bone_LLarm.js",
+			"Children"		: []
+		},
+		{
+			"name" 			: "Bone_Lhand",
+			"modelToLoad" 	: "js/libs/Bones/Bone_Lhand.js",
+			"Children"		: []
+		},
+		{
+			"name" 			: "Bone_Lfeet",
+			"modelToLoad" 	: "js/libs/Bones/Bone_Lfeet.js",
+			"Children"		: []
+		},
+		{
+			"name" 			: "Bone_Lcalf",
+			"modelToLoad" 	: "js/libs/Bones/Bone_Lcalf.js",
+			"Children"		: []
+		},
+		{
+			"name" 			: "Bone_head",
+			"modelToLoad" 	: "js/libs/Bones/Bone_head.js",
+			"Children"		: []
+		}
+	]
+}

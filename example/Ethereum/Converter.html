@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cryptocurrency Converter Calculator</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/ico" href="eth.ico">
+    <meta name="author" content="Kenneth Hu">
+    <meta name="email" content="kenneth.hu@hotmail.com">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+    <link href='css/tokenvoting.css' rel='stylesheet' type='text/css'>
+
+    <style>
+        .margin-top-3 {
+            margin-top: 3em;
+        }
+
+        #walletseed {
+            height: 140px;
+            display: none;
+            text-align: center;
+        }
+        .vertical-spacer {
+    margin-top: 25px;
+}
+   section{
+            margin-top: 50px;
+        }
+    </style>
+
+</head>
+
+<body>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Kenneth</a>
+        </div>
+        <div class="collapse navbar-collapse" style="width: 120%;">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="https://github.com/kennethhutw/Ethereum-Dapps" target="_blank">GitHub</a>
+                </li>
+                <li >
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="Property.html">Property</a>
+                </li>
+                <li>
+                    <a href="Secret.html">Secret</a>
+                </li>
+                <li>
+                    <a href="simpleVoting.html">Simple Voting</a>
+                </li>
+                <li>
+                    <a href="tokenvoting.html">Token Voting</a>
+                </li>
+                <li>
+                    <a href="tokenlist.html">Token List & Convert</a>
+                </li>
+                <li>
+                    <a href="EtherExplore.html">Block Explore</a>
+                </li>
+				<li class="">
+					<a href="WalletService.html">New Wallet</a>
+				 </li>
+                <li class="active">
+                    <a href="Converter.html">Crypto Converter</a>
+                </li>
+                <li class="">
+                    <a href="ico.html">ICO</a>
+                </li>
+				  <li>
+					<a href="http://www.kennethhu.net/example/bitcoin/index.html" class="btn btn-primay" target="_blank">Bitcoin</a>
+				</li>
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</div>
+    <div class="container">
+
+        <div id="alertMsg" class="row"></div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>
+                    <p id="testNet" class="welcome" style="color:red;"></p>
+                </h3>
+
+            </div>
+        </div>
+       <div class="row" style="text-align:center;">
+         <h3>Cryptocurrency Converter Calculator</h3>
+        <h3>-
+            <a href="mailto:Kenneth.hu@hotmail.com"> Kenneth</a>
+        </h3>
+        <h3> Donation in eth : 0xf2d15dEAf62b8c4AFC0343006579E8E662c120D9</h3>
+       </div>
+        <div class="row">
+            <div id="calculator" class="form-group well well-lg col-md-8 col-md-offset-2 col-xs-12" style="visibility: visible; padding: 40px;">
+        
+                <div class="row">
+                    <div class="col-xs-5" style="">
+                        <input type="number" class="form-control " id="conversion-amount" placeholder="Enter Amount to Convert">
+                    </div>
+                </div>
+                <div class="vertical-spacer"></div>
+                <div class="row">
+                    <div class="col-xs-5" style="">
+                        <span>Crypto Name</span>
+                        <select  id="from_currency" class="selectpicker form-control">
+                          
+                        </select>
+
+                    </div>
+                    <div class="col-xs-2 text-center" style="">
+                    </div>
+                    <div class="col-xs-5" style="">
+                        <span>Unit :</span>
+                        <select id="to_currency" class="selectpicker  form-control">
+                            <option value="usd" selected>USD</option>
+                            <option value="aud">AUD</option>
+                            <option value="brl">BRL</option>
+                            <option value="cad">CAD</option>
+                            <option value="chf">CHF</option>
+                            <option value="clp">CLP</option>
+                            <option value="cny">CNY</option>
+                            <option value="czk">CZK</option>
+                            <option value="dkk">DKK</option>
+                            <option value="eur">EUR</option>
+                            <option value="gbp">GBP</option>
+                            <option value="hkd">HKD</option>
+                            <option value="huf">HUF</option>
+                            <option value="idr">IDR</option>
+                            <option value="ils">ILS</option>
+                            <option value="inr">INR</option>
+                            <option value="jpy">JPY</option>
+                            <option value="krw">KRW</option>
+                            <option value="mxn">MXN</option>
+                            <option value="myr">MYR</option>
+                            <option value="nok">NOK</option>
+                            <option value="nzd">NZD</option>
+                            <option value="php">PHP</option>
+                            <option value="pkr">PKR</option>
+                            <option value="pln">PLN</option>
+                            <option value="rub">RUB</option>
+                            <option value="sek">SEK</option>
+                            <option value="sgd">SGD</option>
+                            <option value="thb">THB</option>
+                            <option value="try">TRY</option>
+                            <option value="twd">TWD</option>
+                            <option value="zar">ZAR</option>
+                           
+                        </select>
+
+                    </div>
+                </div>
+                <div class="vertical-spacer"></div>
+                <div class="row">
+                    <div id="conversion-result-left" class="col-xs-5 text-right" >1 Bitcoin (BTC)</div>
+                    <div id="conversion-result-middle" class="col-xs-2  text-center" > = </div>
+                    <div id="conversion-result-right" class="col-xs-5">
+                        <span id="conversion-result-value">1.33</span>
+                        <span id="conversion-result-value-currency">USD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+<script src="js/web3.min.js"></script>
+<script src="js/converter.min.js"></script>
+<script src="js/analytics.js"></script>
+<script>
+
+   
+
+</script>
+
+</html>

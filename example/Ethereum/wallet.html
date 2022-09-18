@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Hello World DApp</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  <link href='css/tokenvoting.css' rel='stylesheet' type='text/css'>
+
+  <style>
+    .margin-top-3 {
+      margin-top: 3em;
+    }
+    #walletseed{
+      height: 140px;
+    display: none;
+    text-align: center;
+    }
+  </style>
+ 
+</head>
+
+<body>
+<!--
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Kenneth</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="https://github.com/kennethhutw/Ethereum-Dapps" target="_blank">GitHub</a>
+          </li>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="Property.html">Property</a>
+          </li>
+          <li>
+            <a href="Secret.html">Secret</a>
+          </li>
+          <li>
+            <a href="simpleVoting.html">Simple Voting</a>
+          </li>
+          <li class="active">
+            <a href="tokenvoting.html">Token Voting</a>
+          </li>
+        </ul>
+      </div>
+      /.nav-collapse 
+    </div>
+  </div>-->
+  <div class="container">
+  <!--  <div class="jumbotron text-center">
+      <h1>A Token Voting Application</h1>
+      <h3>-
+        <a href="mailto:Kenneth.hu@hotmail.com"> Kenneth</a>
+      </h3>
+      <h3> Donation in eth : 0xE804FB406ce9DcCF5b639344285d1B8881165B1c</h3>
+    </div>-->
+    <div id="alertMsg" class="row"></div>
+    <div class="row">
+      <div class="col-lg-12">
+        <h3>
+          <p id="testNet" class="welcome" style="color:red;"></p>
+        </h3>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel with-nav-tabs panel-default">
+          <div class="panel-heading">
+            <ul class="nav nav-tabs">
+              <li class="active">
+                <a href="#tab1default" data-toggle="tab">Default 1</a>
+              </li>
+              <li>
+                <a href="#tab2default" data-toggle="tab">Default 2</a>
+              </li>
+              <li>
+                <a href="#tab3default" data-toggle="tab">Default 3</a>
+              </li>
+              <li class="dropdown">
+                <a href="#" data-toggle="dropdown">Dropdown
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li>
+                    <a href="#tab4default" data-toggle="tab">Default 4</a>
+                  </li>
+                  <li>
+                    <a href="#tab5default" data-toggle="tab">Default 5</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="panel-body">
+            <div class="tab-content">
+              <div class="tab-pane fade in active" id="tab1default">
+              <div class="row form-group">
+                <div class="col-md-3">
+                  <p class="text-primary">Password</p>
+                </div>
+                <div class="col-md-6">
+                  <input type="password" id="psw" class="col-sm-8 form-control" placeholder="Password" value="" />
+                </div>
+                <div class="col-md-3">
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="show-hide" style="left:-230px;" value="">show password
+                  </label>
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-md-3">
+                  <p> Repeat Password</p>
+              
+                </div>
+                <div class="col-md-6">
+                  <input type="password" id="repeatpsw" class="col-sm-8 form-control" placeholder="Password" value="" />
+                </div>
+                <div class="col-md-3">
+              
+                </div>
+              </div>
+                <div class="row form-group">
+                  <div class="col-md-12">
+                    <button type="button" id="generateWalletByPSW" class="btn btn-primary  center-block" data-dismiss="modal" onclick="" style="vertical-align: middle">Generate Wallet</button>
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div id="walletseed">
+                    ssssssssssssssssssssssssssssssssssss
+                  </div>
+                </div>
+              </div>
+            
+
+            
+              <div class="tab-pane fade" id="tab2default">
+                    <div class="row form-group">
+                      <div class="col-md-3">
+                        <p class="text-primary">Password</p>
+                      </div>
+                      <div class="col-md-6">
+                        <input type="password" id="ImportPSW" class="col-sm-8 form-control" placeholder="Password" value="" />
+                      </div>
+                      <div class="col-md-3">
+                        <label class="checkbox-inline">
+                          <input type="checkbox" id="show-hide" style="left:-230px;" value="">show password
+                        </label>
+                      </div>
+                    </div>
+                    <div class="row form-group">
+                      <div class="col-md-3">
+                        <p> Seed</p>
+                    
+                      </div>
+                      <div class="col-md-6">
+                        <input type="text" id="ImportSeed" class="col-sm-8 form-control" placeholder="Seed" value="" />
+                      </div>
+                      <div class="col-md-3">
+                    
+                      </div>
+                    </div>
+                    <div class="row form-group">
+                      <div class="col-md-12">
+                        <button type="button" id="ImportWallet" class="btn btn-primary  center-block" data-dismiss="modal" onclick="" style="vertical-align: middle">Generate Wallet</button>
+                      </div>
+                    </div>
+                     
+              </div>
+              <div class="tab-pane fade" id="tab3default">Default 3</div>
+              <div class="tab-pane fade" id="tab4default">Default 4</div>
+              <div class="tab-pane fade" id="tab5default">Default 5</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+  </div>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/web3.min.js"></script>
+<script src="js/lightwallet.js"></script>
+<script src="js/wallet.js"></script>
+<script src="js/analytics.js"></script>
+<script>
+
+  $("#show-hide").change(function () {
+    console.log("true");
+    if (this.checked) {
+   
+      $("#psw").attr("type", "text");
+      $("#repeatpsw").attr("type", "text");
+      
+    }
+    else {
+       $("#psw").attr("type", "password");
+        $("#repeatpsw").attr("type", "password");
+    }
+  });
+
+</script>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/ico" href="bitcoin.ico">
+    <meta name="author" content="Kenneth Hu">
+    <meta name="email" content="kenneth.hu@hotmail.com">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Ethereum Dapps</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Application -->
+    <link href="css/app.css" rel="stylesheet">
+    <style>
+        .welcome {
+            font-size: 18px;
+            display: inline;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container" style="">
+        <h1>
+            <span>Kenneth's Bitcoin Site -</span>
+            <a href="https://github.com/kennethhutw/SimpleBitcoinWebSite" target="_blank">GitHub</a>
+        </h1>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+
+                <li>
+                    <a href="./index.html" class="btn btn-primay"> Wallet</a>
+                </li>
+                <li>
+                    <a href="./converter.html" class="btn btn-primay">Converter</a>
+                </li>
+                <li>
+                    <a href="./walletInfo.html" class="btn btn-primay">Wallet Info</a>
+                </li>
+                <li class="active">
+                    <a href="./transfer.html" class="btn btn-primay">Transfer</a>
+                </li>
+                <li >
+                    <a href="http://www.kennethhu.net/example/ethereum/index.html" class="btn btn-primay" target="_blank">Ethereum Demo Site</a>
+                </li>
+        </div>
+        <br>
+        <h1>Transfer</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="alertMsg"></div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+            <div class="input-group">
+                <span class="input-group-addon" title="mnemonicnetwork">network</span>
+                <select id="network" class="form-control">
+                    <!-- <option value="1">Main network</option> -->
+                    <option value="0" selected="selected">Live</option>
+                    <option value="1">Testnet</option>
+                </select>
+            </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="fromprivatekey">From : </label>
+                    <input type="text" class="form-control" id="fromprivatekey" aria-describedby="fromprivatekey" placeholder="Private Key" value="1604a53a519e0d5d6bb235b091ed477c97f90185f1d715d747277cca988ad4fd">
+                <span class="input-group-btn">
+                    <input type="button"  class="btn btn-primary" onclick="LoadFrom();" value="Load">
+                    <input type="button" class="btn btn-light clear" onclick="CleanFrom();" value="Reset">
+                </span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="toprivatekey">To : </label>
+                    <!-- <input type="text" class="form-control" id="toprivatekey" aria-describedby="toprivatekey" placeholder=" Private Key"> -->
+                    <input type="text" class="form-control" id="topublickey" aria-describedby="topublickey" placeholder="Private Key"
+                        value="mhKTYzfeNuMWq2foiFXYSZhKWdLWgAbtdW">
+                    <!-- <input type="text" class="form-control" id="topublickey" aria-describedby="topublickey" placeholder="Public Key" value="mhKTYzfeNuMWq2foiFXYSZhKWdLWgAbtdW" > -->
+                <span class="input-group-btn">
+                    <input type="button"  class="btn btn-primary" onclick="LoadTo();" value="Load"> 
+                    <input type="button"  class="btn btn-light clear" onclick="CleanTo();" value="Reset">
+                </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="frompublickey">Public Key : </label>
+                    <input type="text" class="form-control" id="frompublickey" aria-describedby="frompublickey" placeholder="Public Key" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="fromamount">Balance : </label>
+                    <input type="text" class="form-control" id="fromamount" aria-describedby="fromamount" placeholder="Amount" readonly>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <!-- <label for="topublickey">Public Key : </label> -->
+                    <!-- <input type="text" class="form-control" id="topublickey" aria-describedby="topublickey" placeholder="Public Key" readonly>   -->
+                </div>
+                <div class="form-group">
+                    <label for="toamount">Balance : </label>
+                    <input type="text" class="form-control" id="toamount" aria-describedby="toamount" placeholder="Amount" readonly>
+                
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="transfer">Transfer : </label>
+                    <input type="text" class="form-control" id="amount" aria-describedby="amount" placeholder="amount" >
+                    <span class="input-group-btn">
+                        <input type="button" id="querywallet" class="btn btn-primary" onclick="transfer();" value="Transfer">
+                    </span>
+                </div>
+            </div>
+        </div>
+      
+        <div id="footer" class="container">
+            <nav class="navbar navbar-default navbar-fixed-bottom">
+                <div class="navbar-inner navbar-content-center text-center">
+                    <p class="text-muted" credit>
+                        <a href="http://www.kennethhu.net">Kenneth Hu</a> - &copy; 2017 - </p>
+                </div>
+            </nav>
+        </div>
+
+        <div id="secretTemplate" style="display: none;">
+            <div class="row-lg-12">
+                <div class="panel panel-default panel-secret">
+                    <div class="panel-heading">
+                        <strong>Secret title : </strong>
+                        <h3 class="panel-title"></h3>
+                    </div>
+                    <div class="panel-body">
+                        <strong>Description</strong>:
+                        <span class="secret-description"></span>
+                        <br/>
+                        <strong>Price (ETH)</strong>:
+                        <span class="secret-price"></span>
+                        <br/>
+                        <strong>Sold by</strong>:
+                        <span class="secret-seller"></span>
+                        <br/>
+                    </div>
+                    <div class="panel-footer">
+                        <button type="button" class="btn btn-primary btn-success btn-buy" onclick="App.buySecret(); return false;">Buy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/analytics.js"></script>
+        <script src="js/config.js"></script>
+        <script src="js/alert.js"></script>
+        <script src="js/transfer.min.js"></script>
+</body>
+
+</html>

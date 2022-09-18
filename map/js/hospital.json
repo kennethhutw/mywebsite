@@ -1,0 +1,184 @@
+[{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [103.836171, 1.282769]
+  },
+  "properties": {
+    "name": "Singapore General Hospital",
+	"geoy": 103.836171,
+        "geox": 1.282769,
+		"geoarealabel": "Singapore General Hospital"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [103.8445874, 1.3220111]
+  },
+  "properties": {
+    "name": "Mount Elizabeth Novena",
+	"geoy": 103.8445874,
+        "geox": 1.3220111,
+		"geoarealabel": "Mount Elizabeth Novena"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [103.845712, 1.321036]
+  },
+  "properties": {
+    "name": "NHG Pharmacy",
+	"geoy": 103.845712,
+        "geox": 1.321036,
+		"geoarealabel": "NHG Pharmacy"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [103.845595, 1.321324]
+  },
+  "properties": {
+    "name": "Tan Tock Seng Hospital",
+	"geoy": 103.845595,
+        "geox": 1.321324,
+		"geoarealabel": "Tan Tock Seng Hospital"
+  }
+}
+,
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [103.8384, 1.424034]
+  },
+  "properties": {
+    "name": "Khoo Teck Puat Hospital",
+	"geoy": 103.8384,
+        "geox": 1.424034,
+		"geoarealabel": "Khoo Teck Puat Hospital"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [103.949441, 1.340353]
+  },
+  "properties": {
+    "name": "Changi General Hospital",
+	"geoy": 103.949441,
+        "geox": 1.340353,
+		"geoarealabel": "Changi General Hospital"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [103.949094, 1.341769]
+  },
+  "properties": {
+    "name": "St Andrews Community Hospital",
+	"geoy": 103.949094,
+        "geox": 1.341769,
+		"geoarealabel": "St Andrews Community Hospital"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [103.801007, 1.28662]
+  },
+  "properties": {
+    "name": "Alexandra Hospital",
+	"geoy": 103.801007,
+        "geox": 1.28662,
+		"geoarealabel": "Alexandra Hospital"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [103.704596, 1.340143]
+  },
+  "properties": {
+    "name": "Jurong Medical Centre",
+	"geoy": 103.704596,
+        "geox": 1.340143,
+		"geoarealabel": "Jurong Medical Centre"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [103.885005, 1.383077]
+  },
+  "properties": {
+    "name": "Institute of Mental Health / Woodbridge Hospital",
+	"geoy": 103.885005,
+        "geox": 1.383077,
+		"geoarealabel": "Institute of Mental Health / Woodbridge Hospital"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [103.949441, 1.340353]
+  },
+  "properties": {
+    "name": "Changi General Hospital",
+	"geoy": 103.949441,
+        "geox": 1.340353,
+		"geoarealabel": "Changi General Hospital"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [103.849104, 1.319817]
+  },
+  "properties": {
+    "name": "National Skin Center",
+	"geoy": 103.849104,
+        "geox": 1.319817,
+		"geoarealabel": "National Skin Center"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [103.850651, 1.319725]
+  },
+  "properties": {
+    "name": "Communicable Disease Centre",
+	"geoy": 103.850651,
+        "geox": 1.319725,
+		"geoarealabel": "Communicable Disease Centre"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [103.847305, 1.3724019]
+  },
+  "properties": {
+    "name": "NHG Polyclinics ( Ang Mo Kio )",
+	"geoy": 103.847305,
+        "geox": 1.3724019,
+		"geoarealabel": "NHG Polyclinics ( Ang Mo Kio )"
+  }
+}
+]

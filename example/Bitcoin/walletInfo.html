@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>
+            Kenneth's bitcoin site
+        </title>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" type="image/ico" href="bitcoin.ico">
+        <meta name="author" content="Kenneth Hu">
+        <meta name="email" content="kenneth.hu@hotmail.com">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/app.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </head>
+    <div class="container">
+    <h1>
+        <span>Kenneth's Bitcoin Site -</span>
+        <a href="https://github.com/kennethhutw/SimpleBitcoinWebSite" target="_blank">GitHub</a>
+    </h1>
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+    
+            <li >
+                <a href="./index.html" class="btn btn-primay"> Wallet</a>
+            </li>
+            <li>
+                <a href="./converter.html" class="btn btn-primay">Converter</a>
+            </li>
+            <li class="active">
+                <a href="./walletInfo.html" class="btn btn-primay">Wallet Info</a>
+            </li>
+                <li >
+                    <a href="./transfer.html" class="btn btn-primay">Transfer</a>
+                </li>
+            <li>
+                <a href="http://www.kennethhu.net/example/ethereum/index.html" class="btn btn-primay" target="_blank">Ethereum Demo Site</a>
+            </li>
+    </div>
+    
+    <h1>Wallet Info</h1>
+    <div class="row">
+        <div class="col-md-12">
+            <div id="alertMsg"></div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="input-group">
+                <span class="input-group-addon" title="mnemonicnetwork">network</span>
+                <select id="network" class="form-control">
+                    <!-- <option value="1">Main network</option> -->
+                    <option value="0" selected="selected">Live</option>
+                    <option value="1">Testnet</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <br>
+  <div class="input-group">
+    <label for="Balance">Account</label>
+        <input type="text" id="account" class="form-control" name="account">
+        <span class="input-group-btn" style=" padding-top: 25px; ">>
+        <input type="button" id="querywallet" class="btn btn-primary" onclick="querywallet();" value="Search">
+        </span>
+    </div>
+    <hr>
+    <div class="form-group">
+        <label for="Balance">Balance</label>
+        <input type="text" class="form-control" id="balance" placeholder="balance" value="0" aria-describedby="basic-addon1">
+    
+    </div>
+    <div class="form-group">
+        <label for="Balance">Total Received</label>
+        <input type="text" class="form-control" id="totalReceived" aria-describedby="totalReceived" placeholder="totalReceived" value="0">
+    
+    </div>
+    <div class="form-group">
+        <label for="totalSent">Total Sent</label>
+        <input type="text" class="form-control" id="totalSent" aria-describedby="totalSent" placeholder="totalSent" value="0">
+    
+    </div>
+</div>
+<footer class=footer>
+    <p class="text-center text-muted">© Copyright 2017
+        <a href="http://www.kennethhu.net">Kenneth Hu</a> -
+        <a href="https://github.com/kennethhutw/BitcoinBrainwallet" target="_blank">GitHub</a>
+    </p>
+</footer>
+<script src="js/config.js"></script>
+<script src="js/alert.js"></script>
+<script src="js/walletinfo.min.js"></script>
+<script src="js/analytics.js"></script>
+</html>
