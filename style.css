@@ -66,3 +66,31 @@ body{background:var(--paper);color:var(--ink)}
 
 .who-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line)}.who-grid>div{padding:25px;border-right:1px solid var(--line)}.who-grid>div:last-child{border-right:0}.who-grid strong{display:block;font-size:16px;font-weight:500;margin-bottom:12px}.who-grid span{display:block;font-size:12px;line-height:1.8;color:var(--muted)}@media(max-width:700px){.who-grid{grid-template-columns:1fr}.who-grid>div{border-right:0;border-bottom:1px solid var(--line)}.who-grid>div:last-child{border-bottom:0}}
 .current-focus{padding-top:72px;padding-bottom:72px}.focus-cards{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line)}.focus-cards article{padding:25px;border-right:1px solid var(--line)}.focus-cards article:last-child{border-right:0}.focus-cards span{font-size:9px;letter-spacing:1.4px;color:var(--muted)}.focus-cards h3{font-size:20px;font-weight:500;line-height:1.35;margin:26px 0 13px}.focus-cards p{font-size:12px;line-height:1.8;color:var(--muted)}.focus-link{margin-top:24px}@media(max-width:700px){.focus-cards{grid-template-columns:1fr}.focus-cards article{border-right:0;border-bottom:1px solid var(--line)}.focus-cards article:last-child{border-bottom:0}}
+.focus-photo-strip{display:grid;grid-template-columns:1.2fr 1fr;gap:16px;margin-top:28px}.focus-photo-strip figure{margin:0}.focus-photo-strip img{display:block;width:100%;height:230px;object-fit:cover;filter:saturate(.82)}.focus-photo-strip figure:first-child img{height:280px}.focus-photo-strip figcaption{font-size:10px;letter-spacing:.3px;color:var(--muted);margin-top:9px}@media(max-width:700px){.focus-photo-strip{grid-template-columns:1fr}.focus-photo-strip img,.focus-photo-strip figure:first-child img{height:230px}}
+/* Editorial activity photography: masked frames, restrained colour, no gallery treatment. */
+.focus-photo-strip{display:grid;grid-template-columns:1.18fr .82fr;gap:18px;margin-top:34px;align-items:end}
+.focus-photo{position:relative;margin:0;overflow:hidden;background:#20252b;isolation:isolate}
+.focus-photo-main{height:330px;clip-path:polygon(0 0,96% 0,100% 8%,100% 100%,4% 100%,0 92%)}
+.focus-photo-secondary{height:250px;clip-path:polygon(4% 0,100% 0,100% 92%,96% 100%,0 100%,0 8%)}
+.focus-photo img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.7) contrast(1.04);transition:transform .45s ease,filter .45s ease}
+.focus-photo-main img{object-position:center 54%}.focus-photo-secondary img{object-position:center 48%}
+.focus-photo:hover img{transform:scale(1.035);filter:saturate(.9) contrast(1.04)}
+.focus-photo:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 48%,rgba(13,20,28,.78) 100%);z-index:1;pointer-events:none}
+.photo-label{position:absolute;left:20px;bottom:17px;z-index:2;color:#faf9f6;font-size:9px;letter-spacing:1.3px;font-weight:600}.photo-arrow{position:absolute;right:19px;bottom:12px;z-index:2;color:#faf9f6;font-size:21px}
+@media(max-width:700px){.focus-photo-strip{grid-template-columns:1fr;gap:14px}.focus-photo-main,.focus-photo-secondary{height:245px;clip-path:polygon(0 0,97% 0,100% 6%,100% 100%,3% 100%,0 94%)}}
+/* Final photo composition: one market anchor with two contextual moments. */
+.focus-photo-strip{grid-template-columns:1.25fr .75fr;grid-template-rows:1fr 1fr;gap:16px;align-items:stretch}
+.focus-photo-main{grid-row:1 / 3;height:430px;clip-path:polygon(0 0,97% 0,100% 5%,100% 100%,3% 100%,0 95%)}
+.focus-photo-secondary,.focus-photo-networking{height:207px}
+.focus-photo-secondary{clip-path:polygon(4% 0,100% 0,100% 94%,96% 100%,0 100%,0 6%)}
+.focus-photo-networking{clip-path:polygon(0 0,96% 0,100% 8%,100% 100%,4% 100%,0 92%)}
+@media(max-width:700px){.focus-photo-strip{grid-template-columns:1fr;grid-template-rows:auto;gap:14px}.focus-photo-main{grid-row:auto;height:270px}.focus-photo-secondary,.focus-photo-networking{height:210px}}
+/* Explicit editorial grid placement: anchor left, context right. */
+.focus-photo-main{grid-column:1;grid-row:1 / 3}
+.focus-photo-secondary{grid-column:2;grid-row:1}
+.focus-photo-networking{grid-column:2;grid-row:2}
+@media(max-width:700px){.focus-photo-main,.focus-photo-secondary,.focus-photo-networking{grid-column:1;grid-row:auto}}
+.fieldwork-section{padding:78px 0;background:#f1f0eb;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.fieldwork-heading{margin-bottom:28px}.fieldwork-heading h2{font-size:clamp(30px,3.1vw,44px)}
+@media(max-width:700px){.fieldwork-section{padding:55px 0}}
+.contact-telegram{margin-top:18px;font-size:11px;gap:14px;color:var(--muted)}
