@@ -1,5 +1,6 @@
 const zh = document.documentElement.lang === 'zh-Hant';
 const language = document.querySelector('#language');
+language.addEventListener('click', () => localStorage.setItem('kenneth-language', zh ? 'en' : 'zh'));
 if (zh) { language.href = '../index.html'; language.lang = 'en'; language.setAttribute('aria-label', 'Switch to English'); language.innerHTML = 'EN <span>↗</span>'; }
 document.querySelector('#year').textContent = new Date().getFullYear();
 const cases = {
